@@ -11,10 +11,10 @@ Objetivo: Familiarizarse con los conceptos básicos de programación
 
 Preguntas Sondas
 
-- Quienes programaron en otra cosa que no se Pascal?
-- Quienes saben lo que es Linux/Unix?
+- Quienes programaron en otra cosa que no sea Pascal?
+- Quien trabaja de programador?
 - Quienes saben lo que es un OS?
-- Quienes solo usaron Windows?
+- Quienes saben lo que es Linux/Unix?
 - Quienes tienen maquinas con linux?
 
 Preguntas para la clase, aproximar respuestas juntos, muy alto nivel todo
@@ -87,11 +87,7 @@ Fuerte, Estatica y Seguro
 ```
 
 
-# 2
-
-Objetivo: Introducir conceptos básicos de Python, instalar Python
-
-
+DONE
 - Que es Pascal?
 ```
 En su encarnacion tipica, Pascal es
@@ -99,6 +95,7 @@ En su encarnacion tipica, Pascal es
 - Es Compilado (AoT)
 ```
 
+DONE
 - Que es Python?
 ```
 - Un lenguage con tipado debil y dinmaico
@@ -106,6 +103,7 @@ En su encarnacion tipica, Pascal es
 - REPL
 ```
 
+PSEUDO DONE
 - Por que python?
 ```
 - Es un lenguaje mas moderno que Pascal
@@ -114,12 +112,18 @@ En su encarnacion tipica, Pascal es
 - Es un lenguaje muy usado por lo que están aprendiendo algo de mucho valor y ademas hay mucha documentación en internet
 ```
 
+DONE
 - Dudas? Y preguntas
 ```
 Mostrar como buscar en internet
 Las dudas traerlas a clase y las hablamos entre todos
 ```
 
+# 2
+
+Objetivo: Introducir conceptos básicos de Python
+
+NEXT
 - Como usamos python?
 
 ```
@@ -134,20 +138,54 @@ Las dudas traerlas a clase y las hablamos entre todos
   - Escribir `print("Hola!!!")`
 ```
 
-Mostar como se usa el REPL, 
-Pensar como mostrar el REPL en windows (bu)
 
+- Python REPL
 
-# 3
+- variables dinamicas con numeros
 
-Objetivos: Introduccion a la programacion en python
+- booleans
 
-// Probablmente esto nos lleve varias clases
-variables,
-print
-loops
-collections: array, tuple, set, dict
-functions
+- comparaciones
 
+- strings
+  - crear strings
+  - concatenacion
+  - multiplicacion
+  - indexacion
+  - slices
+  - inmutabilidad
 
+- listas
+  - crear listas
+  - concat
+  - indexacion
+  - slices
+  - mutabilidad
+  - append / pop
+  - assignacion
+  - range fn
+
+- tuplas
+  - como armarlas
+  - como usarlas
+
+# Hasta aca llego la 2da clase
+
+- control de flujo
+  - if
+  - for (for i in range(10))
+  - while?
+
+- funciones:
+  - como crearlas
+  - modelo de computacion de funciones puras, in -> out
+  - hablar bastante sobre esto
+  - fibonachi
+
+- FSA
+  - Tratar de llegar a una solucion entre todos
+  - establecer un modelo de caja negra primero
+  - usar el ejemplo primero del material de estudio
+  - evaluar un poco los caminos posibles
+  - hablar un poco de la expresion de ideas concretas en un lenguaje de programacion
 
