@@ -181,6 +181,7 @@ NEXT
   - modelo de computacion de funciones puras, in -> out
   - hablar bastante sobre esto
   - fibonachi
+  - scopes
 
 - FSA
   - Tratar de llegar a una solucion entre todos
