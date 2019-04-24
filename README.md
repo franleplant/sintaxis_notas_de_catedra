@@ -52,6 +52,8 @@ ejemplos:
 sumas, restas, multiplicaciones, leer dir de memoria, escribir a memoria, entre otras
 ```
 
+https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&gist=790acd3f11948272341bd34e571432fd
+
 - Que es un source file o un archivo fuente?
 ```
 - Archivo de texto, plano, no word, solo texto
