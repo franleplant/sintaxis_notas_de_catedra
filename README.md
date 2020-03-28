@@ -125,6 +125,8 @@ Las dudas traerlas a clase y las hablamos entre todos
 
 Objetivo: Introducir conceptos básicos de Python
 
+
+
 NEXT
 - Como usamos python?
 
@@ -143,52 +145,71 @@ NEXT
 
 - Python REPL
 
-- variables dinamicas con numeros
 
-- booleans
+En lugar de repasar que es una variable, un loop, un string etc etc tomamos el approach "hands on"
+y lo que hacemos es construir 2 automatas finitos deterministicos muy simples con una
+estructura muy austera (pero correcta) que dsp van a usar en el tp del lexer.
 
-- comparaciones
+- Ejemplo 1 TODO, es el primer automata del tp creo que es a^n b o algo asi
+- Ejemplo 2 https://github.com/franleplant/sintaxis2019-automata-time/blob/master/main.py
 
-- strings
-  - crear strings
-  - concatenacion
-  - multiplicacion
-  - indexacion
-  - slices
-  - inmutabilidad
 
-- listas
-  - crear listas
-  - concat
-  - indexacion
-  - slices
-  - mutabilidad
-  - append / pop
-  - assignacion
-  - range fn
 
-- tuplas
-  - como armarlas
-  - como usarlas
+# Lexing
 
-# Hasta aca llego la 2da clase
+TODO formalizar el algoritmo que les vengo dando desde hace tiempo en un pseudo codigo parecido 
+al que se les da en clase 
 
-- control de flujo
-  - if
-  - for (for i in range(10))
-  - while?
+```
+- input: source, del tipo string
+- output: una lista de Tokens
+- Token: (TokenKind, Lexeme)
+- VALID_TOKENS: es la lista de todos los tokens validos y los automatas que los detectan, de la forma: [(TokenKind, AFD)]
+- los afd devuelven 3 posibles valores: RESULTADO_ACEPTADO, RESULTADO_TRAMPA, RESULTADO_NO_ACEPTADO
 
-- funciones:
-  - como crearlas
-  - modelo de computacion de funciones puras, in -> out
-  - hablar bastante sobre esto
-  - fibonachi
-  - scopes
 
-- FSA
-  - Tratar de llegar a una solucion entre todos
-  - establecer un modelo de caja negra primero
-  - usar el ejemplo primero del material de estudio
-  - evaluar un poco los caminos posibles
-  - hablar un poco de la expresion de ideas concretas en un lenguaje de programacion
+fn lex
 
+index = 0
+tokens = [] 
+
+while index < len(source)
+  while source[index] sea espacio en blanco
+    index += 1
+
+  start = index
+  candidates = []
+  next_candidates = []
+  all_trapped = false
+  
+
+  while not all_trapped
+    all_trapped = True
+    lexeme = src[start:index + 1]
+    candidates = next_candidates
+    next_candidates = []
+
+    for (tokenKind, afd) in VALID_TOKENS      
+      res = afd(lexeme)
+      if res == ACCEPTED:
+          next_candidates.append(token_type)
+          all_trapped = False
+      elif res == NOT_ACCEPTED:
+          all_trapped = False
+      
+      index += 1
+
+      if no hay candidatos entonces:
+         error token desconocido
+
+  # usamos el primer candidato de los posibles  
+  token_kind = candidates[0]
+  # construimos el token
+  token = (tokenKind, lexeme)
+  tokens.append(token)
+
+return tokens
+```
+
+
+Example: https://github.com/franleplant/simple-dfa-lexer.py/blob/master/main.py
