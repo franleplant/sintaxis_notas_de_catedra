@@ -19,7 +19,9 @@ Preguntas Sondas
 
 Preguntas para la clase, aproximar respuestas juntos, muy alto nivel todo
 
-- Que es programar?
+- que es un programa/software? ejemplos?
+
+- Que es programar? (como se construyen esos programas?)
 ```
 - Decirle a la computadora que hacer
 - Expresar ideas complejas en partes mas simples y componerlas con el fin de instruir a la computadora que hacer
