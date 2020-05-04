@@ -99,7 +99,6 @@ En su encarnacion tipica, Pascal es
 - Es Compilado (AoT)
 ```
 
-DONE
 - Que es Python?
 ```
 - Un lenguage con tipado debil y dinmaico
@@ -107,7 +106,6 @@ DONE
 - REPL
 ```
 
-PSEUDO DONE
 - Por que python?
 ```
 - Es un lenguaje mas moderno que Pascal
@@ -116,7 +114,6 @@ PSEUDO DONE
 - Es un lenguaje muy usado por lo que están aprendiendo algo de mucho valor y ademas hay mucha documentación en internet
 ```
 
-DONE
 - Dudas? Y preguntas
 ```
 Mostrar como buscar en internet
@@ -128,8 +125,6 @@ Las dudas traerlas a clase y las hablamos entre todos
 Objetivo: Introducir conceptos básicos de Python
 
 
-
-NEXT
 - Como usamos python?
 
 ```
@@ -144,6 +139,7 @@ NEXT
   - Escribir `print("Hola!!!")`
 ```
 
+- TAREA: que lean el tutorial oficial en español https://tutorial.python.org.ar/en/latest/real-index.html
 
 - Python REPL
 
@@ -152,7 +148,7 @@ En lugar de repasar que es una variable, un loop, un string etc etc tomamos el a
 y lo que hacemos es construir 2 automatas finitos deterministicos muy simples con una
 estructura muy austera (pero correcta) que dsp van a usar en el tp del lexer.
 
-- Ejemplo 1 TODO, es el primer automata del tp creo que es a^n b o algo asi
+- Ejemplo 1 automata "a+b"
 - Ejemplo 2 https://github.com/franleplant/sintaxis2019-automata-time/blob/master/main.py
 
 
@@ -160,7 +156,7 @@ estructura muy austera (pero correcta) que dsp van a usar en el tp del lexer.
 # Lexing
 
 TODO formalizar el algoritmo que les vengo dando desde hace tiempo en un pseudo codigo parecido 
-al que se les da en clase 
+al que se les da en clase (ver el de mini reg exp engine)
 
 ```
 - input: source, del tipo string
