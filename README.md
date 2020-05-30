@@ -164,49 +164,75 @@ al que se les da en clase (ver el de mini reg exp engine)
 - Token: (TokenKind, Lexeme)
 - VALID_TOKENS: es la lista de todos los tokens validos y los automatas que los detectan, de la forma: [(TokenKind, AFD)]
 - los afd devuelven 3 posibles valores: RESULTADO_ACEPTADO, RESULTADO_TRAMPA, RESULTADO_NO_ACEPTADO
+```
 
 
-fn lex
+```
+type TokenKind = string
+type Lexeme = string
+type Token = (TokenKind, Lexeme)
 
-index = 0
-tokens = [] 
+fn lex(source: string): List[Token]
 
-while index < len(source)
-  while source[index] sea espacio en blanco
-    index += 1
+  # agregamos un espacio al final para facilitar la condicion de corte
+  source = source + " "
+  index = 0
+  tokens = [] 
 
-  start = index
-  candidates = []
-  next_candidates = []
-  all_trapped = false
-  
-
-  while not all_trapped
-    all_trapped = True
-    lexeme = src[start:index + 1]
-    candidates = next_candidates
-    next_candidates = []
-
-    for (tokenKind, afd) in VALID_TOKENS      
-      res = afd(lexeme)
-      if res == ACCEPTED:
-          next_candidates.append(token_type)
-          all_trapped = False
-      elif res == NOT_ACCEPTED:
-          all_trapped = False
-      
+  while index < len(source) {
+    if source[index] es espacio en blanco
       index += 1
+      continue
 
-      if no hay candidatos entonces:
-         error token desconocido
+    candidates: List[TokenKind> = []
+    start = index
+  
+    while True {
+      next = calcCandidates(source[start:index + 1])
+      if next.allTrapped
+        break
 
-  # usamos el primer candidato de los posibles  
-  token_kind = candidates[0]
-  # construimos el token
-  token = (tokenKind, lexeme)
-  tokens.append(token)
+   
+      candidates = next.candidates;
+      index += 1;
+    }
+    
 
+    if len(candidates) == 0
+      error "Token desconocido"
+    
+    token_kind = candidates[0]
+    lexeme = source[start : index]
+    token = (token_kind, lexeme)
+    tokens.append(token)
+ }
+  
 return tokens
+```
+
+```
+type TokenConfig = List[(TokenKind, Automata)]
+let TOKEN_CONFIG: TokenConfig = [
+  ("ParOpen", parOpenAutomata),
+  ...
+]
+
+def calcCandidates(str: string): {allTrapped: bool, candidates: List[TokenKind]}
+
+  allTrapped = true
+  candidates = []
+  for (token_kind, automata) in TOKEN_CONFIG {
+    res = automata(str)
+    if res == RESULT_ACCEPTED
+      allTrapped = false
+      candidates.append(token_kind)
+    if res == RESULT_NOT_ACCEPTED
+      allTrapped = false
+      
+  }
+  
+  return {allTrapped, candidates}
+           
 ```
 
 
