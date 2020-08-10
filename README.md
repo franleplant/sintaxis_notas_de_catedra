@@ -237,3 +237,44 @@ def calcCandidates(str: string): {allTrapped: bool, candidates: List[TokenKind]}
 
 
 Example: https://github.com/franleplant/simple-dfa-lexer.py/blob/master/main.py
+
+
+
+## Parsing
+
+Simple model https://github.com/franleplant/recursive-descent-parser-py/blob/master/parser_backt_simple_fn_model.py
+
+High level struture. 
+
+Esto esta modelado en base a la teoria / diapositivas mas algunas estructuras basicas programaticas
+
+```python
+def Parser(tokens):
+    self = {
+        'tokens': tokens,
+        'index': 0,
+        'error': False,
+    }
+
+    # Llamado "algoritmo" en el material
+    def parse():
+        pni('S')
+        token_actual = self['tokens'][self['index']]
+        if token_actual != 'eof' or self['error']:
+            print('Unexpected input termination')
+            return False
+
+        return True
+
+    def procesar(parteDerecha):
+       # TODO
+
+
+    # Llamado "Pni" (ACA pasa el backtracking)
+    def pni(noTerminal):
+       # TODO
+
+
+    # la funcion Parser devuelve est
+    return parse()
+```
