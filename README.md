@@ -242,7 +242,7 @@ Example: https://github.com/franleplant/simple-dfa-lexer.py/blob/master/main.py
 
 ## Parsing
 
-Simple model https://github.com/franleplant/recursive-descent-parser-py/blob/master/parser_backt_simple_fn_model.py
+Simple model recursive-descent-parser-py
 
 High level struture. 
 
