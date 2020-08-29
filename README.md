@@ -249,9 +249,21 @@ High level struture.
 Esto esta modelado en base a la teoria / diapositivas mas algunas estructuras basicas programaticas
 
 ```python
-def Parser(tokens):
+
+# main data structure
+producciones = {
+    'S': [
+        ['a', 'S', 'a'],
+        ['a', 'a'],
+    ]
+}
+
+no_terminales = ['S']
+
+def Parser(inputString):
+    # internal state
     self = {
-        'tokens': tokens,
+        'tokens': lex(inputString),
         'index': 0,
         'error': False,
     }
