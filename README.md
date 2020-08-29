@@ -290,3 +290,8 @@ def Parser(inputString):
     # la funcion Parser devuelve est
     return parse()
 ```
+
+
+Ejercicio: S -> aSa | aa
+
+https://docs.google.com/spreadsheets/d/1f5UQ7AUDb1mH9QSKJuH7mXYp6VnaLD-EESETDkaUCtU/edit#gid=0
